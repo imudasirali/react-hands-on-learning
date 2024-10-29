@@ -1,0 +1,84 @@
+#new-todo-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#new-todo-form>* {
+    margin: 0.5rem 0;
+}
+
+#todo-input {
+    padding: 0.5rem;
+}
+
+#list {
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.list-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.list-item:hover {
+    background-color: #f0f0f5;
+}
+
+.list-item-label:hover,
+[data-list-item-checkbox]:hover {
+    cursor: pointer;
+}
+
+.list-item-label:hover>[data-list-item-text] {
+    color: #555;
+    text-decoration: line-through;
+}
+
+[data-list-item-checkbox]:checked~[data-list-item-text] {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+[data-button-delete],
+[data-button-edit] {
+    margin-left: 0.5rem;
+    background-color: #e0e0e0;
+    border: none;
+    color: #666;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-button-delete]:hover,
+[data-button-edit]:hover {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    background-color: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
