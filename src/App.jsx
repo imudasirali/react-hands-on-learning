@@ -1,6 +1,18 @@
-function App() {
+import { Card } from "./components/Card";
+import user from "./data/user.json";
+import "./styles.css";
 
-  return <h1>Hi</h1>
+function App() {
+  return (
+    <div>
+      <Card
+        name={user.name}
+        age={user.age}
+        phoneNumber={user.phoneNumber}
+        address={user.address}
+      ></Card>
+    </div>
+  );
 }
 
-export default App
+export default App;
