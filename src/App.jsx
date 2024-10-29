@@ -1,6 +1,15 @@
-function App() {
+import Person from "./Person";
+import PersonClass from "./PersonClass";
 
-  return <h1>Hi</h1>
+function App() {
+  return (
+    <div>
+      <h1>Function Component</h1>
+      <Person />
+      <h1>Class Component</h1>
+      <PersonClass />
+    </div>
+  );
 }
 
-export default App
+export default App;
