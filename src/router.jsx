@@ -6,6 +6,8 @@ import { PageLayout } from "./layouts/Pagelayout";
 import { SinglePostRoute } from "./pages/SinglePostPage";
 import { SingleUserRoute } from "./pages/SingleUserPage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { NewPostRoute } from "./pages/NewPost";
+import { EditPostRoute } from "./pages/EditPost";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
               {
                 path: ":postId",
                 ...SinglePostRoute,
+              },
+              {
+                path: "new",
+                ...NewPostRoute,
+              },
+              {
+                path: ":postId/edit",
+                ...EditPostRoute,
               },
             ],
           },
